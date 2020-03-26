@@ -1,4 +1,4 @@
-json_parser:packages/json_parser/
+BHA_Builder:packages/BHA_Builder/
 _fe_analyzer_shared:packages/_fe_analyzer_shared/
 analyzer:packages/analyzer/
 archive:packages/archive/
@@ -64,4 +64,5 @@ typed_data:packages/typed_data/
 watcher:packages/watcher/
 web_socket_channel:packages/web_socket_channel/
 yaml:packages/yaml/
+json_parser:packages/json_parser/
 $sdk:packages/$sdk/
