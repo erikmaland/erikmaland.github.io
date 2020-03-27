@@ -64,5 +64,4 @@ typed_data:packages/typed_data/
 watcher:packages/watcher/
 web_socket_channel:packages/web_socket_channel/
 yaml:packages/yaml/
-json_parser:packages/json_parser/
 $sdk:packages/$sdk/
