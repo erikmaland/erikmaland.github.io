@@ -8,14 +8,10 @@
     --color-gray-1:#707070;
     --color-gray-2:#EAEDF1;
     --color-gray-3:#BCBCBC;
+    --color-gray-4:#63696C;
 
     --color-black:#1F282D;
     --color-white:#FCFFFE;
-<<<<<<< HEAD
-
-    --color-orange:#E76049;
-=======
->>>>>>> 6a9666de7201cd0d0c8914bcb9afe6e223ff12da
     
   }
   html,body{
@@ -30,7 +26,71 @@
       display: flex;
       flex-direction: column;
   }
-<<<<<<< HEAD
+
+  /* ***** General buttons styling start ***** */
+
+  .btn{
+    padding:8px 24px;
+    background-color: transparent;
+    border:1px solid var(--color-black);
+    color:var(--color-black);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-radius: 99px;
+  }
+
+  .btn-dark{
+
+  }
+  .btn:hover{
+    cursor: pointer;
+  }
+  .btn-blue{
+    background-color: var(--color-blue-2);
+    border-color: var(--color-blue-2);
+    color:var(--color-white);
+  }
+  .btn-blue:hover{
+    background-color: var(--color-blue-1);
+    border-color: var(--color-blue-1);
+    cursor:pointer;
+  }
+  .btn.btn-white{
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+  }
+  .btn.btn-large{
+    padding:15px 40px;
+  }
+  /* ***** General buttons styling end ******* */
+
+
+
+
+
+  /* ***** General input styling start ******* */
+  input{
+    padding:12px 30px;
+    border:none;
+    background-color: var(--color-white);
+    font-size: 1em;
+    text-align: center;
+    color:var(--color-black);
+    border-radius: 3px;
+  }
+  input::placeholder{
+    color:var(--color-black);
+  }
+
+  /* ***** General input styling end ********* */
+
+
+
+
+
+
+
   .login-bar{
     position: absolute;
     top:30px;
@@ -49,25 +109,16 @@
     
   }
   .login-bar .btn{
-    padding:8px 24px;
-    background-color: transparent;
-    border:1px solid var(--color-black);
-    color:var(--color-black);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-    border-radius: 99px;
+   
     float:left;
     margin-left: 20px;
     margin-top: 2px;
   }
-=======
->>>>>>> 6a9666de7201cd0d0c8914bcb9afe6e223ff12da
   .container{
       flex:100vh;
   
       display: flex;
-      justify-content: space-between;
+      /*justify-content: space-between;*/
   }
   .container .primary{
     padding:0 100px;  
@@ -75,27 +126,29 @@
     background-color: var(--color-gray-2);
 
     display:flex;
+    flex-direction: column;
     justify-content: center;
-
-      
   }
-  .container .primary .tool-viewport{
+  .container .primary .viewport-wrapper{
+    flex-basis: 80vh;
+  }
+  .container .primary .viewport{
     flex: 0 1 100%;
     
     display:flex;
     }
-    .container .primary .tool-viewport .scale{
+    .container .primary .viewport .scale{
         flex:2;
         text-align: center;
         font-size: 0.8em;
         
     }
-    .container .primary .tool-viewport .scale div{
+    .container .primary .viewport .scale div{
         margin:60px 0;
         color:var(--color-gray-1);
         /*Skriv om til FLEX?*/
     }
-    .container .primary .tool-viewport .tool{
+    .container .primary .viewport .tool{
         flex:10;
        
         margin-top:60px;
@@ -103,9 +156,39 @@
         flex-direction: column;
         
     }
-    .container .primary .tool-viewport .tool svg{
-        height: 150px;
+    .container .primary .viewport .tool svg{
+        height: 110px;
     }
+
+
+
+    .shop-view-list h1{
+      margin-bottom: 30px;
+    }
+    .shop-view-list{
+      display: flex;
+      flex-direction: column;
+      margin-right: 10%;
+    }
+
+    .shop-item{
+      padding:20px 0;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid var(--color-gray-3);
+
+    }
+    .shop-item div{
+      flex:7;
+    }
+    .shop-item div:nth-child(2){
+      flex:3;
+      text-align: right;
+    }
+
+
+
+
 
     svg polygon{
       fill: url(#ItemGradient);
@@ -125,6 +208,8 @@
       stop-color: #AEAFAF;
     }
 
+
+  /* ***** Secodary Div styling start ******* */
   .container .secondary{
       background-color: var(--color-blue-2);
       flex:2;
@@ -135,7 +220,6 @@
   .container .secondary.sidebar div{
       margin:20px 0;
   }
-  
   .container .secondary.sidebar div:nth-child(1){
       font-weight: 600;
   }
@@ -144,16 +228,13 @@
       font-size: 1.8em;
   }
   .container .secondary h2{
-<<<<<<< HEAD
     font-weight: 500;
-=======
-    font-weight: 600;
->>>>>>> 6a9666de7201cd0d0c8914bcb9afe6e223ff12da
     font-size: 1em;
   }
   .container .secondary h1{
     font-weight: 500;
     font-size: 1.8em;
+    margin-bottom: 25px;
   }
   
   .container .secondary .navigation_bar{
@@ -176,11 +257,42 @@
     background-color: var(--color-white);
     color:var(--color-black);
   }
-  
+  .secondary .text-table{
+    margin-top: 60px;
+    border-bottom: 1px solid var(--color-gray-4);
+    padding-bottom: 30px;
+  }
+  .secondary .text-table:nth-child(5){
+    border-bottom: none;
+    margin-top: 40px;
+  }
+  .secondary .text-table .text-table-row{
+    display: flex;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  .secondary .text-table .text-table-row .text-table-left{
+    flex: 1 1 50%;
+    color:var(--color-gray-1);
+    
+  }
+  .secondary .text-table .text-table-row .text-table-right{
+    flex: 1 1 50%;
+    color:var(--color-white);
+    
+  }
+  /* ***** Secodary Div styling end ******** */
   
 
-  /* OVERLAY START SKJERM */
-<<<<<<< HEAD
+
+
+
+
+
+  
+
+   /* ***** Overlay Login Screen start ******* */
   .overlay {
       position: absolute;
       width: 100vw;
@@ -189,26 +301,44 @@
       left: 0px;
       top: 0px;
 
-      text-align: center;
-      padding-top: 60px;
-      color: #fff;
+      display: flex;
+      justify-content: center;
+    
+  }
+  .overlay .overlay-container{
+    flex-basis: 50%;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .overlay .overlay-viewport{
+    flex-basis: 50%;
+    text-align: center;  
+    color: #fff;
+  }
+  .overlay .overlay-viewport input{
+    margin-bottom: 15px;
+  }
+  .overlay .overlay-viewport button{
+    margin-bottom: 30px;
+    margin-top: 25px;
+   
   }
 
 .overlay h1 {
     font-weight: 500;
     font-size: 1.8em;
+    margin-bottom: 40px;
 }
-=======
-  .overlay{
-      position:absolute;
-      width: 100vw;
-      height: 100vh;
-      background-color: #E76049;
-      left:0px;
-      top:0px;
+.overlay a{
+  color:var(--color-black);
+  text-decoration: underline;
+  font-weight: 500;
+}
 
-      text-align: center;
-      padding-top:60px;
-      color:#fff;
-  }
->>>>>>> 6a9666de7201cd0d0c8914bcb9afe6e223ff12da
+a:hover.pointer-link {
+  cursor: pointer;
+}
+/* ***** Overlay Login Screen end ******* */
